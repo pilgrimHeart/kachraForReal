@@ -1,14 +1,11 @@
 const express = require('express')
-const port = 5000
+const port = 3000
 const server = express()
-const database = require('./db')
-const bodyParser = require('body-parser')
-const controller = require('./controllers/registerController')
-const router = require('./routes/route')
 
-server.use(bodyParser.urlencoded({ extended: true }))
-server.use(bodyParser.json())
-server.use('/', router)
+server.use(express.json())
+server.use(express.urlencoded({ extended: true }))
+
+require('./routes/route')(server)
 
 server.listen(port, (err) => {
   if (err) {
