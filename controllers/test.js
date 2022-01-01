@@ -1,10 +1,14 @@
-const mode = require('../models/Model')
+const jwt = require('jsonwebtoken')
 
-
-
-const check=async (req,res)=>{
-let abc=await model.findOne()
-
-
-
+const auth = async (req, res) => {
+  try {
+    const bearerHeader = await req.headers['authorization']
+    if (typeof bearerHeader !== undefined) {
+      const bearer = await bearerHeader.split()
+    } else {
+    }
+  } catch (error) {
+    console.log('error')
+  }
 }
+module.exports = { auth }

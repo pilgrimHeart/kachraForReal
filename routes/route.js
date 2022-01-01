@@ -1,7 +1,9 @@
-const control = require('../controllers/register')
-const control1 = require('../controllers/login')
+const control = require('../controllers/pureFunction')
+const auth = require('../controllers/test')
+const express = require('express')
+const router = express.Router()
 
-module.exports = (router) => {
-  router.post('/register', control.register)
-  router.post('/login', control1.login)
-}
+router.post('/register', control.register)
+router.post('/login', control.login)
+router.post('/hi', auth.auth)
+module.exports = router
