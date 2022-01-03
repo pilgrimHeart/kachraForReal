@@ -4,7 +4,6 @@ const server = express()
 const database = require('./db')
 const bodyParser = require('body-parser')
 const controller = require('./controllers/pureFunction')
-const auth = require('./controllers/test')
 
 const router = require('./routes/route')
 

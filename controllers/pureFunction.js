@@ -31,6 +31,7 @@ const login = async (req, res) => {
   console.log(req.body)
   try {
     let check = await model.findOne({ email: req.body.email })
+
     if (check) {
       let result = await bcrypt.compare(req.body.password, check.password)
       if (!result) {
