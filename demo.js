@@ -1,4 +1,4 @@
-const model = require('./models/Model')
+const model = require('./models/student')
 
 const finder = async (req, res) => {
   try {

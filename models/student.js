@@ -5,10 +5,9 @@ const userSchema = new mongoose.Schema(
     email: { type: String },
     username: { type: String },
     password: { type: String },
-    
   },
   { timestamps: true }
 )
 
-const add = mongoose.model('token', userSchema)
+const add = mongoose.model('students', userSchema)
 module.exports = add

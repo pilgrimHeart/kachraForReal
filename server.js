@@ -1,9 +1,9 @@
 const express = require('express')
-const port = 3000
+const port = 5000
 const server = express()
 const database = require('./db')
 const bodyParser = require('body-parser')
-const controller = require('./controllers/pureFunction')
+const controller = require('./controllers/logic')
 
 const router = require('./routes/route')
 
