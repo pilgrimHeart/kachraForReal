@@ -84,6 +84,7 @@ const classES = async (req, res) => {
   let classES = await new classes({
     name: req.body.name,
     schoolname: req.body.schoolname,
+   
   })
   console.log(req.body)
   classES.save()
